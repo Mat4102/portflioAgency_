@@ -1,0 +1,77 @@
+$size: 1em;
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, [col] 1fr);
+  grid-template-rows: repeat(5, [row] auto);
+  grid-column-gap: 1em;
+  grid-row-gap: 15px;
+}
+
+.grid-item {
+  background: #eee;
+  text-transform: uppercase;
+  padding: 1em;
+  font-size: 14px;
+}
+
+.grid-item-1 {
+  grid-column: col / span 4;
+  grid-row: row / span 2;
+}
+
+.grid-item-2 {
+  grid-column: col 5 / span 4;
+  grid-row: row / span 3;
+}
+
+.grid-item-3 {
+  grid-column: col 9 / span 4;
+  grid-row: row;
+}
+
+.grid-item-4 {
+  grid-column: col 9 / span 4;
+  grid-row: row 2;
+}
+
+.grid-item-5 {
+  grid-column: col / span 3;
+  grid-row: row 3;
+}
+
+.grid-item-6 {
+  grid-column: col 4;
+  grid-row: row 3;
+}
+
+.grid-item-7 {
+  grid-column: col 9;
+  grid-row: row 3;
+}
+
+.grid-item-8 {
+  grid-column: col 10 / span 3;
+  grid-row: row 3;
+}
+
+.grid-item-9 {
+  grid-column: col / span 6;
+  grid-row: row 4;
+}
+
+.grid-item-10 {
+  grid-column: col 7 / span 3;
+  grid-row: row 4;
+}
+
+.grid-item-11 {
+  grid-column: col 10 / span 3;
+  grid-row: row 4;
+}
+
+.grid-item-12 {
+  grid-column: col / span 12;
+  grid-row: row 5;
+}
+
