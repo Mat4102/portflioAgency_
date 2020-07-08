@@ -1,0 +1,19 @@
+
+@import "variables";
+@mixin background_url($url) {
+  background: no-repeat url($url);
+  }
+
+@mixin text_menu($position, $decoration) {
+  text-align: $position;
+  text-decoration: $decoration;
+}
+
+
+@mixin flex-logo ($value){
+  padding-left: $value;
+  float: left;
+  margin: 0px;
+  font-size: 3em;
+  font-family: $font_family;
+}

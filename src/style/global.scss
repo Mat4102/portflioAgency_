@@ -1,5 +1,9 @@
-$bg-color: #000;
-
+@import "variables";
 body {
   background-color: $bg-color;
 }
+
+p, span, h1; h2, h3, h4, a, td {
+               font-family: $font_family;
+             }
+
