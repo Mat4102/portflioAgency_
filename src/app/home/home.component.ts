@@ -1,5 +1,6 @@
 import { Component} from '@angular/core';
 import {trigger, style, transition, animate} from '@angular/animations';
+import {MatIconModule} from '@angular/material/icon';
 
 @Component({
   selector: 'app-home',

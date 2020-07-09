@@ -63,7 +63,7 @@
 
 .grid-item-10 {
   grid-column: col / span 4;
-  grid-row: row 7 / span 3;
+  grid-row: row 7/ span 3;
 }
 
 .grid-item-11 {
@@ -71,23 +71,28 @@
   grid-row: row 7 / span 3;
 }
 
+.grid-item-separator{
+  grid-column: col / span 12;
+  grid-row: row 10 / span 1;
+}
+
 .grid-item-12 {
   grid-column: col / span 12;
-  grid-row: row 10 / span 2;
+  grid-row: row 11 / span 2;
 }
 .grid-item-13 {
   grid-column: col / span 4;
-  grid-row: row 11;
+  grid-row: row 12;
 }
 
 .grid-item-14 {
   grid-column: col 5/ span 4;
-  grid-row: row 11;
+  grid-row: row 12;
 }
 
 .grid-item-15 {
   grid-column: col 9/ span 4;
-  grid-row: row 11;
+  grid-row: row 12;
 }
 
 

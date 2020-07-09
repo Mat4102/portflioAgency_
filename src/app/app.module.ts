@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { HomeLadureeComponent } from './home-laduree/home-laduree.component';
 import { HomeEssilorComponent } from './home-essilor/home-essilor.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {AngularMaterialModule} from './angular-material.module';
 
 
 @NgModule({
@@ -19,8 +20,12 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+   AngularMaterialModule
 
+
+  ],
+  exports: [
   ],
   providers: [],
   bootstrap: [AppComponent]
