@@ -147,24 +147,37 @@ p::first-letter {
 
 
 
+div.at-container {
+ // display: flex;
+  //align-items: center;
+  //justify-content: center;
+  height: 100%;
+}
 .at-item {
-  color: #fff;
-  animation-name: focus-in-contract;
+  color: #ffffff;
+  animation-name: focus-in-zoomout;
   animation-duration: 1s;
-  animation-timing-function: linear;
-  animation-delay: 0.4s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
   animation-iteration-count: 1;
   animation-direction: normal;
   animation-fill-mode: none;
 }
-@keyframes focus-in-contract {
+@keyframes focus-in-zoomout {
   0%{
-    letter-spacing: 0.6em;
-    filter: blur(20px);
-    opacity: 1;
+    letter-spacing: 0.2em;
+    -webkit-transform: translateY(300px);
+    transform: translateY(300px);
+    filter: blur(12px);
+    opacity: 0;
   }
   100%{
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
     filter: blur(0);
     opacity: 1;
   }
 }
+
+
+

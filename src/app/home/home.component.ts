@@ -10,10 +10,10 @@ import {MatIconModule} from '@angular/material/icon';
     trigger('fadeIn', [
       transition(':enter', [
         style({ opacity: 0 }),
-        animate('3s', style({ opacity: 1 })),
+        animate('6s', style({ opacity: 1 })),
       ]),
       transition(':leave', [
-        animate('3s', style({ opacity: 1 }))
+        animate('5s', style({ opacity: 1 }))
       ])
     ])
   ]
