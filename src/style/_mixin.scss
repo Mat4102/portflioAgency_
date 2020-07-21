@@ -14,6 +14,53 @@
   padding-left: $value;
   float: left;
   margin: 0px;
-  font-size: 3em;
   font-family: $font_family;
+  line-height: 4vw;
+  font-size: 5vw;
+  font-weight: bold;
+  text-transform: initial;
+}
+
+@mixin default-lable ($size, $position){
+  color: #ffffff;
+  font-family: $font_family;
+  font-size: $size;
+  letter-spacing: 0;
+  line-height: 5px;
+  align-self: $position;
+}
+
+@mixin logo_size($logo_size) {
+  width: $logo_size;
+  height: 100%;
+}
+
+@mixin sm {
+  @media (min-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (min-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (min-width: #{$screen-xl-min}) {
+    @content;
+  }
+}
+
+@mixin rwd($screen) {
+  @media (min-width: $screen+'px' ) {
+    @content;
+  }
 }

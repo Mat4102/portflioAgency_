@@ -48,11 +48,13 @@ div {
    float: right;
  }
   & p {
-    color: #FFFFFF;
-    font-family: $font_family;
-    font-size: $size ;
-    letter-spacing: 0;
-    line-height: 5px;
+    @include default-lable($size, center);
+    @include lg {
+      @include default-lable(1vw, center);
+    }
+    @include xl {
+      @include default-lable(1vw, center);
+    }
   }
 }
 p::first-letter {
@@ -66,11 +68,21 @@ p::first-letter {
 
 .logo {
   @include background_url($logo_svg);
-  background-size: 50% auto;
+  background-size: 100%;
+  width: 140px;
+  z-index: 10;
+  @include sm { @include logo_size(120px);}
+  @include md { @include logo_size(130px);}
+  @include lg { @include logo_size(140px);}
+  @include xl { @include logo_size(150px);}
 }
+
 .N {
   @include background_url($N_svg);
   background-size: contain;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  background-position-x: center;
 }
 .N-text-block {
   text-align: justify;
@@ -91,17 +103,25 @@ p::first-letter {
 
 .flex-text-exigence {
   @include flex-logo(10%);
+
 }
 
 .flex-text-qualite {
   @include flex-logo(20%);
 }
 
-
+.block-text-align {
+  margin-top: 5%;
+  margin-left: -15%;
+}
 .width-max {
   width: 100%;
 }
 
+.text-right{
+align-self: center;
+  flex: 1;
+}
 
 
 .bounce {
@@ -148,10 +168,9 @@ p::first-letter {
 
 
 div.at-container {
- // display: flex;
-  //align-items: center;
-  //justify-content: center;
   height: 100%;
+  width: 160%;
+  position: relative;
 }
 .at-item {
   color: #ffffff;

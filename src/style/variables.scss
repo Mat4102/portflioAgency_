@@ -1,6 +1,11 @@
 $bg-color: #000000;
-$size: 1em;
+$size: 1.5vw;
 $image_padding: 10px;
 $logo_svg: '../assets/image/Logo%20-%20Nexton%20Agency_Logo%20impression.svg';
 $N_svg: '../assets/image/N.png';
 $font_family: Roboto Regular, arial;
+
+$screen-sm-min: 576px;
+$screen-md-min: 768px;
+$screen-lg-min: 992px;
+$screen-xl-min: 1200px;
