@@ -9,6 +9,15 @@
   text-decoration: $decoration;
 }
 
+@mixin background_image($url, $width, $height){
+  background: {
+    image: $url;
+    repeat: no-repeat;
+  }
+  height: $height;
+  width: $width;
+}
+
 
 @mixin flex-logo ($value){
   padding-left: $value;
@@ -30,9 +39,9 @@
   align-self: $position;
 }
 
-@mixin logo_size($logo_size) {
-  width: $logo_size;
-  height: 100%;
+@mixin logo_size($width, $height: 100%) {
+  width: $width;
+  height: $height;
 }
 
 @mixin default_grid($row, $colum_gap, $row_gap){

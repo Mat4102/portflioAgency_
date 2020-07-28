@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "nxtPortfolioAgency"
+  "defaultProject": "nxtPortfolioAgency",
+  "cli": {
+    "analytics": "2d0fa891-14eb-4a5d-b665-69e6bc0f2e8d"
+  }
 }
