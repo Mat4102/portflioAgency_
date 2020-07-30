@@ -10,34 +10,39 @@
 // }
 
 .intro {
-     @include background_image(url("/assets/image/agency/intro.png"), 100%, 100%)
+     @include background_image(url("/assets/image/agency/intro.png"), 100%, 100%);
+    //  position: absolute;
+    // z-index: 10;
    }
 
 .logo {
     @include background_url($logo_svg);
     background-size: 100%;
-    width: 156px;
+    width: 130px;
     z-index: 10;
     @include sm { @include logo_size(120px, 100%);}
     @include md { @include logo_size(130px, 100%);}
     @include lg { @include logo_size(140px, 100%);}
     @include xl { @include logo_size(150px, 100%);}
+    background-size: 180px 120px;
   }
 
   .grid{
     @include default_grid(10%, 0.5vw, 0.5vh);
     overflow: auto;
   }
+  
 .grid-item {
-      background-color: blue ;
   text-transform: uppercase;
   font-size: 14px;
 }
 .grid-item-1 {
-    grid-column: col/ span 2;
-    grid-row: row / span 2;
+    grid-column: col/span 12;
+    grid-row: row/span 2;
     margin-top: 0;
-  }
+    /* position: absolute; */
+    width: 100%;
+}
 
 .grid-item-2 {
     grid-column: col / span 12;
@@ -45,27 +50,135 @@
   }
 
   .grid-item-3 {
-    grid-column: col / span 12;
-    grid-row: row 16 /span 2;
-    width: 144px;
-    height:2164px;
-  }
-
-  .grid-item-4 {
-    grid-column: col / span 12;
-    grid-row: row 18 /span 2;
-    height: 157px;
-    width: 486px;
+    // @include background_image(url("/assets/image/agency/Background.svg"), 100%, 100%);
     color: #272727;
-    font-family: Roboto;
-    font-size: 20px;
-    letter-spacing: 0;
-    line-height: 28px;
-
-  }
-  .grid-item-5 {
+    background-color: white;
     grid-column: col / span 12;
-    grid-row: row 20 /span 2;
+    grid-row: row 16 /span 6;
+    display: grid;
+    grid-template-columns: repeat(12, [col] 1fr);
+    grid-template-rows: repeat(3, [row] 30%);
+    grid-auto-rows: minmax(100px, auto);
+    grid-column-gap: 0.2vw;
+    grid-row-gap: 0.2vh;
+    margin-top: -15px;
+  }
+  .grid-item-4 {
+    @include background_image(url("/assets/image/agency/Background_3.svg"), 100%, 100%);
+    color: #272727;
+    background-color: white;
+    grid-column: col / span 12;
+    grid-row: row 24 /span 60;
+    display: grid;
+    grid-template-columns: repeat(12, [col] 1fr);
+    grid-template-rows: repeat(3, [row] 30%);
+    grid-auto-rows: minmax(100px, auto);
+    grid-column-gap: 0.2vw;
+    grid-row-gap: 0.2vh;
+    margin-top: -15px;
+  }
+
+//   .grid-item-4 {
+//     grid-column: col 4  / span 8;
+//     grid-row: row 18 /span 2;
+//     height: 157px;
+//     width: 486px;
+//     color: #272727;
+//     font-family: Roboto;
+//     font-size: 20px;
+//     letter-spacing: 0;
+//     line-height: 28px;
+
+//   }
+//   .grid-item-5 {
+//     grid-column: col 9 / span 3;
+//     grid-row: row 20 /span 2;
+//     height: 233px;
+//     width: 486px;
+//     color: #272727;
+//     font-family: Roboto;
+//     font-size: 20px;
+//     font-weight: 500;
+//     letter-spacing: 0;
+//     line-height: 28px;
+//   }
+//   .grid-item-6 {
+//     grid-column: col 5 / span 7;
+//     grid-row: row 22 /span 2;
+//     height: 84px;
+//     width: 486px;
+//     color: #4C4C4C;
+//     font-family: Roboto;
+//     font-size: 20px;
+//     letter-spacing: 0;
+//     line-height: 28px;
+//   }
+//   .grid-item-7 {
+//     grid-column: col 5 / span 7;
+//     grid-row: row 24 /span 2;
+//     height: 84px;
+//     width: 486px;
+//     color: #4C4C4C;
+//     font-family: Roboto;
+//     font-size: 20px;
+//     letter-spacing: 0;
+//     line-height: 28px;
+//   }
+
+.bloc-image {
+    /* z-index: -1; */
+    opacity: 0.6;
+    /* margin-top: 0px; */
+    position: relative;
+    /* margin-left: 0px; */
+    padding: 0px;
+    /* background-size: 50%; */
+    width: 70%;
+    float: left;
+}
+  .item_1 {
+    grid-column: col  / span 12;
+    grid-row: row / span 1;
+    display: flex;
+    & div > p {
+      margin: 5px;
+    }
+  }
+  .item_2 {
+    grid-column: col 3 / span 9;
+    grid-row: row 2 / span 1;
+    display: flex;
+  
+    & div > p {
+      margin: 5px;
+    }
+  }
+  
+  .item_3 {
+    grid-column: col 9 / span 3;
+    grid-row: row 3 / span 1;
+    display: flex;
+    & div > p {
+      margin: 5px;
+    }
+  }
+  .item_4 {
+  grid-column: col 4 / span 8;
+  grid-row: row 2 / span 1;
+  display: flex;
+  & div > p {
+    margin: 5px;
+  }
+}
+  .item_5 {
+  grid-column: col 4 / span 8;
+  grid-row: row 3 / span 1;
+  display: flex;
+  & div > p {
+    margin: 5px;
+  }
+}
+.text_item{
     height: 233px;
     width: 486px;
     color: #272727;
@@ -74,24 +187,59 @@
     font-weight: 500;
     letter-spacing: 0;
     line-height: 28px;
+    margin-top: 110px;
+}
+// .text_item_miniscul{
+//     height: 233px;
+//     width: 486px;
+//     color: #272727;
+//     font-family: Roboto;
+//     font-size: 20px;
+//     font-weight: 500;
+//     letter-spacing: 0;
+//     line-height: 28px;
+//     margin-top: 110px;
+//     text-transform: lowercase;
+// }
+.text_item_1{
+    height: 96px;
+  width: 1918px;
+  margin-top: 100px;
+  font-family: Roboto;
+  font-size: 200px;
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 32px;
+  text-align: center;
+}
+.text-menu-expertise {
+    @include text_menu(right,underline);
   }
-  .grid-item-6 {
-    grid-column: col / span 12;
-    grid-row: row 22 /span 2;
-    height: 84px;
-    width: 486px;
-    color: #4C4C4C;
-    font-family: Roboto;
-    font-size: 20px;
-    letter-spacing: 0;
-    line-height: 28px;
+
+  .item_6 {
+  grid-column: col 9 / span 3;
+  grid-row: row 4 / span 1;
+  display: flex;
+  & div > p {
+    margin: 5px;
   }
-  .grid-item-7 {
-    height: 84px;
-    width: 486px;
-    color: #4C4C4C;
-    font-family: Roboto;
-    font-size: 20px;
-    letter-spacing: 0;
-    line-height: 28px;
+}
+
+.item_7 {
+    @include background_image(url("/assets/image/agency/Effeil.svg"), 100%, 100%);
+    grid-column: col 3 / span 9;
+    grid-row: row 2 / span 1;
+    display: flex;
+    margin-top: 100px;
+    margin-left: 60px;
   }
+  .item_8 {
+    @include background_image(url("/assets/image/agency/Immeuble.svg"), 100%, 100%);
+    grid-column: col 3 / span 9;
+    grid-row: row 3 / span 1;
+    display: flex;
+    margin-top: 100px;
+    margin-left: 60px;
+  }
+
+  
