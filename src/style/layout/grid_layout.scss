@@ -1,15 +1,19 @@
 @import "src/style/variables";
+@import "src/style/mixin";
 
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(12,[col]  1fr);
-  grid-template-rows: repeat(14, [row] 7%);
-  grid-column-gap:0.5vw;
-  grid-row-gap: 0.5vh;
-  height: 100%;
+// .grid {
+//   display: grid;
+//   grid-template-columns: repeat(12,[col]  1fr);
+//   grid-template-rows: repeat(14, [row] 7%);
+//   grid-column-gap:0.5vw;
+//   grid-row-gap: 0.5vh;
+//   height: 100%;
+// }
+
+.grid{
+  @include default_grid(7%, 0.5vw, 0.5vh);
 }
-
 .grid-item {
   //background: #000;
   text-transform: uppercase;
