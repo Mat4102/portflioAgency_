@@ -8,6 +8,9 @@ import { HomeLadureeComponent } from './home-laduree/home-laduree.component';
 import { HomeEssilorComponent } from './home-essilor/home-essilor.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {AngularMaterialModule} from './angular-material.module';
+import { HomePatriciaComponent } from './home-patricia/home-patricia.component';
+import { HomeOrangeComponent } from './home-orange/home-orange.component';
+import { HomeTotalComponent } from './home-total/home-total.component';
 
 
 @NgModule({
@@ -15,7 +18,10 @@ import {AngularMaterialModule} from './angular-material.module';
     AppComponent,
     HomeComponent,
     HomeLadureeComponent,
-    HomeEssilorComponent
+    HomeEssilorComponent,
+    HomePatriciaComponent,
+    HomeOrangeComponent,
+    HomeTotalComponent
   ],
   imports: [
     BrowserModule,

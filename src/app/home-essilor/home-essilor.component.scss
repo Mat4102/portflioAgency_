@@ -1,0 +1,102 @@
+
+@import "src/style/variables";
+@import "src/style/mixin";
+
+.img_triangle-3 {
+  background: no-repeat url("../../assets/image/Triangle-projet-3.svg");
+  width: 50%;
+
+}
+
+.grid-item-4 {
+  grid-column: col/span 6;
+  grid-row: row 3/span 9;
+}
+
+.grid-item-6 {
+  grid-column: col 7/span 3;
+  grid-row: row 3/span 7;
+}
+
+
+.grid-item-12 {
+  grid-column: col/span 12;
+  grid-column: col/span 12;
+  grid-row: row 2/span 2;
+  width: 100%;
+  z-index: -4;
+  opacity: 1.5;
+  position: absolute;
+  height: 100%;
+  margin-left: 40%;
+  background-size: 60%;
+
+}
+
+div {
+  &.footer > img {
+    float: right;
+  }
+  & p {
+    @include default-lable($size, center);
+    @include lg {
+      @include default-lable(1vw, center);
+    }
+    @include xl {
+      @include default-lable(1vw, center);
+    }
+  }
+}
+
+.responsive-img{
+  width: 100%;
+  height: auto;
+
+}
+
+.logo {
+  @include background_url($logo_svg);
+  background-size: 100%;
+  width: 140px;
+  z-index: 10;
+  @include sm { @include logo_size(120px);}
+  @include md { @include logo_size(130px);}
+  @include lg { @include logo_size(140px);}
+  @include xl { @include logo_size(150px);}
+}
+
+.img-fleur {
+  @include background_url('/assets/image/Fleur_noire_2.jpg');
+  background-size: cover;
+  background-position-y: center;
+  z-index: 2;
+  background-repeat: no-repeat;
+}
+
+.block-text-align {
+  margin-top: 5%;
+  margin-left: -15%;
+}
+.width-max {
+  width: 100%;
+}
+
+.text-right{
+  align-self: center;
+  flex: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
