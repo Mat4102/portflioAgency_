@@ -1,47 +1,20 @@
 @import "src/style/variables";
 @import "src/style/mixin";
 
-.bloc-image:after{
-  background:no-repeat url("../../assets/image/Triangle.svg");
-  z-index: 9;
+.img_triangle {
+  background: no-repeat url("../../assets/image/Triangle.svg");
   opacity: 0.60;
   margin-top: -10%;
-  position: absolute;
   margin-left: -5%;
-  background-size: 50%;
+  background-size: 55%;
+  content: '';
+  position:absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
 }
-
-.bloc-double:before,
-.couleur-remplissage:after{
-content:'';
-display:block;
-position:absolute;
-bottom:0;
-top:0;
-left:0;
-right:0;
-z-index:1;
-transition :  1.35s ease-in-out;
-transition-property : top, bottom, left,right, border-width;
-}
-.bloc-background:after{
-content:none;
-}
-
-#enarriere:checked ~ .bloc-couleur div{
-position:relative;
-z-index:3;
-}
-
-.to-middle-top:after {
-  transform: skew(90deg, 0deg);
-  transition-property: transform;
-}
-
-.to-middle-top:hover:after {
-  transform: skew(0deg, 0deg);
-}
-
 
 div {
  &.footer > img {
@@ -64,6 +37,7 @@ p::first-letter {
 .responsive-img{
   width: 100%;
   height: auto;
+
 }
 
 .logo {
@@ -154,27 +128,39 @@ align-self: center;
   60% {-moz-transform: translateY(-15px);}
 }
 
-@-o-keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {-o-transform: translateY(0);}
-  40% {-o-transform: translateY(-30px);}
-  60% {-o-transform: translateY(-15px);}
-}
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
   40% {transform: translateY(-30px);}
   60% {transform: translateY(-15px);}
 }
 
-
-
 div.at-container {
   height: 100%;
-  width: 160%;
+  width: 200%;
   position: relative;
 }
 .at-item {
   color: #ffffff;
-  animation-name: focus-in-zoomout;
+  animation-duration: 1s;
+}
+
+a {
+  z-index: 100;
+  position: absolute;
+}
+
+
+div.at-container-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.at-item-2 {
+  width: 100px;
+  height: 100px;
+  background-color:#ffe672;
+  animation-name: rotate-in-right;
   animation-duration: 1s;
   animation-timing-function: ease;
   animation-delay: 0s;
@@ -182,18 +168,19 @@ div.at-container {
   animation-direction: normal;
   animation-fill-mode: none;
 }
-@keyframes focus-in-zoomout {
+@keyframes rotate-in-right {
   0%{
-    letter-spacing: 0.2em;
-    -webkit-transform: translateY(300px);
-    transform: translateY(300px);
-    filter: blur(12px);
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+    -webkit-transform-origin: right;
+    transform-origin: right;
     opacity: 0;
   }
   100%{
-    -webkit-transform: translateY(0px);
-    transform: translateY(0px);
-    filter: blur(0);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transform-origin: right;
+    transform-origin: right;
     opacity: 1;
   }
 }

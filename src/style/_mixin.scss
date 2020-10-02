@@ -35,6 +35,17 @@
   height: 100%;
 }
 
+@mixin default_grid($row, $colum_gap, $row_gap){
+    display: grid;
+    grid-template-columns: repeat(12,[col]  1fr);
+    grid-template-rows: repeat(14, [row] $row);
+    grid-column-gap: $colum_gap;
+    grid-row-gap: $row_gap;
+    height: 100%;
+
+}
+
+//parti_responsive
 @mixin sm {
   @media (min-width: #{$screen-sm-min}) {
     @content;

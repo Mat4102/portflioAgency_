@@ -8,14 +8,15 @@ import { HomeLadureeComponent } from './home-laduree/home-laduree.component';
 import { HomeEssilorComponent } from './home-essilor/home-essilor.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {AngularMaterialModule} from './angular-material.module';
-
+import { HomeAgencyComponent } from './agency/home-agency/home-agency.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     HomeLadureeComponent,
-    HomeEssilorComponent
+    HomeEssilorComponent,
+    HomeAgencyComponent
   ],
   imports: [
     BrowserModule,
