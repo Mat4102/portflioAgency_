@@ -1,9 +1,9 @@
 {
   "name": "nxt-portfolio-agency",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --live-reload=false",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -11,14 +11,17 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "~10.0.0",
+    "@angular/animations": "^10.0.2",
+    "@angular/cdk": "^10.0.1",
     "@angular/common": "~10.0.0",
     "@angular/compiler": "~10.0.0",
     "@angular/core": "~10.0.0",
     "@angular/forms": "~10.0.0",
+    "@angular/material": "^10.0.1",
     "@angular/platform-browser": "~10.0.0",
     "@angular/platform-browser-dynamic": "~10.0.0",
     "@angular/router": "~10.0.0",
+    "angular-material": "^1.1.24",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.3"

@@ -1,0 +1,202 @@
+@import "src/style/variables";
+@import "src/style/mixin";
+
+.bloc-image:after{
+  background:no-repeat url("../../assets/image/Triangle.svg");
+  z-index: 9;
+  opacity: 0.60;
+  margin-top: -10%;
+  position: absolute;
+  margin-left: -5%;
+  background-size: 50%;
+}
+
+.bloc-double:before,
+.couleur-remplissage:after{
+content:'';
+display:block;
+position:absolute;
+bottom:0;
+top:0;
+left:0;
+right:0;
+z-index:1;
+transition :  1.35s ease-in-out;
+transition-property : top, bottom, left,right, border-width;
+}
+.bloc-background:after{
+content:none;
+}
+
+#enarriere:checked ~ .bloc-couleur div{
+position:relative;
+z-index:3;
+}
+
+.to-middle-top:after {
+  transform: skew(90deg, 0deg);
+  transition-property: transform;
+}
+
+.to-middle-top:hover:after {
+  transform: skew(0deg, 0deg);
+}
+
+
+div {
+ &.footer > img {
+   float: right;
+ }
+  & p {
+    @include default-lable($size, center);
+    @include lg {
+      @include default-lable(1vw, center);
+    }
+    @include xl {
+      @include default-lable(1vw, center);
+    }
+  }
+}
+p::first-letter {
+  color: #008DFF;
+}
+
+.responsive-img{
+  width: 100%;
+  height: auto;
+}
+
+.logo {
+  @include background_url($logo_svg);
+  background-size: 100%;
+  width: 140px;
+  z-index: 10;
+  @include sm { @include logo_size(120px);}
+  @include md { @include logo_size(130px);}
+  @include lg { @include logo_size(140px);}
+  @include xl { @include logo_size(150px);}
+}
+
+.N {
+  @include background_url($N_svg);
+  background-size: contain;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  background-position-x: center;
+}
+.N-text-block {
+  text-align: justify;
+  padding-left: 5%;
+}
+
+.text-menu-agency {
+@include text_menu(left,underline);
+}
+
+.text-menu-expertise {
+  @include text_menu(right,underline);
+}
+
+.flex-text-expertise {
+  @include flex-logo(0%);
+}
+
+.flex-text-exigence {
+  @include flex-logo(10%);
+
+}
+
+.flex-text-qualite {
+  @include flex-logo(20%);
+}
+
+.block-text-align {
+  margin-top: 5%;
+  margin-left: -15%;
+}
+.width-max {
+  width: 100%;
+}
+
+.text-right{
+align-self: center;
+  flex: 1;
+}
+
+
+.bounce {
+  position: absolute;
+  bottom: 30px;
+  left: 50% ;
+  width: 60px;
+  height: 60px ;
+  margin-left:-30px;
+  border: 0x;
+  -webkit-border-radius:50%;
+  -moz-border-radius:50%;
+  -ms-border-radius:50%;
+  border-radius:50%;
+  animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  -moz-animation: bounce 2s infinite;
+  -o-animation: bounce 2s infinite;
+}
+
+@-webkit-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);}
+  40% {-webkit-transform: translateY(-30px);}
+  60% {-webkit-transform: translateY(-15px);}
+}
+
+@-moz-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {-moz-transform: translateY(0);}
+  40% {-moz-transform: translateY(-30px);}
+  60% {-moz-transform: translateY(-15px);}
+}
+
+@-o-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {-o-transform: translateY(0);}
+  40% {-o-transform: translateY(-30px);}
+  60% {-o-transform: translateY(-15px);}
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+  40% {transform: translateY(-30px);}
+  60% {transform: translateY(-15px);}
+}
+
+
+
+div.at-container {
+  height: 100%;
+  width: 160%;
+  position: relative;
+}
+.at-item {
+  color: #ffffff;
+  animation-name: focus-in-zoomout;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
+}
+@keyframes focus-in-zoomout {
+  0%{
+    letter-spacing: 0.2em;
+    -webkit-transform: translateY(300px);
+    transform: translateY(300px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100%{
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+
+
